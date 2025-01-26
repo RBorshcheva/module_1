@@ -3,10 +3,11 @@
 const cart = {
     items: [],
     count: 0,
+    totalPrice: 0,
 
     //метод возвращает значение свойства totalPrice
     getTotalPrice(){
-        return this.calculateItemPrice();
+        return this.totalPrice = this.calculateItemPrice();
     },
 
     //Принимает три параметра: название товара цену товара количество товара (опциональный параметр, по умолчанию 1 товар)
@@ -36,6 +37,7 @@ const cart = {
     clear(){
         this.count = 0;
         this.items = [];
+        this.totalPrice = 0;
     },
 
     //Выводит в консоль JSON строку из массива items и на следующей строке выводит общую стоимость корзины
