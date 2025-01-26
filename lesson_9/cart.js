@@ -7,7 +7,7 @@ const cart = {
 
     //метод возвращает значение свойства totalPrice
     getTotalPrice(){
-        return this.totalPrice = this.calculateItemPrice();
+        return this.totalPrice;
     },
 
     //Принимает три параметра: название товара цену товара количество товара (опциональный параметр, по умолчанию 1 товар)
@@ -21,6 +21,7 @@ const cart = {
         }
         this.items.push(newItem);
         this.increaseCount(itemAmount);
+        this.calculateItemPrice();
     },
     //Принимает один параметр(число) Увеличивает свойство count на это число
     increaseCount(num){
@@ -29,7 +30,7 @@ const cart = {
     
     //пересчитывает стоимость всей корзины используя метод reduce и записывает значение в totalPrice
     calculateItemPrice() {
-        return this.items.reduce((acc, item) =>
+        return this.totalPrice = this.items.reduce((acc, item) =>
           acc + (item.price * item.amount), 0);
       },
 
