@@ -1,8 +1,7 @@
 'use strict'
-
 //написать функцию, которая будет возвращать число равное количеству уникальных ip-адресов
 
-const listIPv4 = [
+export const listIPv4 =[
   "10.90.112.24",
   "10.64.146.250",
   "10.215.63.84",
@@ -24448,11 +24447,4 @@ const listIPv4 = [
   "10.195.201.68",
   "10.78.125.206",
   "10.0.32.20"
-];
-
-const uniqueIP = (list) => {
-  const set = new Set(list);
-  return set.size;
-}
-console.log('ЗАДАНИЕ 2');
-console.log(`Количество уникальных ip-адресов: ${uniqueIP(listIPv4)}`);
+]

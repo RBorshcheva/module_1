@@ -1,5 +1,7 @@
 'use strict'
 
+import {listIPv4} from './ipv4.js';
+
 const cart = {
     items: [],
     count: 0,
@@ -64,3 +66,12 @@ cart.print();
 console.log(`Корзина очещена`);
 cart.clear();
 cart.print();
+
+console.log('Задание с IP');
+
+const uniqueIP = (list) => {
+    const set = new Set(list);
+    return set.size;
+  }
+
+ console.log(`Количество уникальных ip-адресов: ${uniqueIP(listIPv4)}`);
